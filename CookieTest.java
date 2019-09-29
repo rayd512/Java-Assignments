@@ -13,10 +13,11 @@ public class CookieTest {
      */
     public static boolean verifyCookie(String cookie) {
         boolean legal = false;
-        Pattern p = Pattern.compile("Set-Cookie:");//. represents single character  
-		Matcher m = p.matcher(cookie);  
+        Pattern p = Pattern.compile("^(Set-Cookie:\\s)((\\w*)=)");//. represents single character  
+		Matcher m = p.matcher(cookie);
+		// ([!#$%&'\\(\\)*+-./0-9:<=>?@A-Z\\[\\]^_`a-z\\{|\\}~\\]*\\(\\)?=&|$))
 		legal = m.matches();
-		legal = cookie.contains("Set-Cookie: ");
+		// legal = cookie.contains("Set-Cookie: ");
 
         return legal;
     }
@@ -46,6 +47,7 @@ public class CookieTest {
             "Set-Cookie: ns1=alss/0.foobar^; Domain=.com-",             // 15 illegal Domain: trailing non-letter-digit
             "Set-Cookie: ns1=alss/0.foobar^; Path=",                    // 16 illegal Path: empty
             "Set-Cookie: ns1=alss/0.foobar^; httponly",                 // 17 lower case
+            "Set-Cookie: ns?",                 // 17 lower case
         };
         for (int i = 0; i < cookies.length; i++)
             System.out.println(String.format("Cookie %2d: %s", i+1, verifyCookie(cookies[i]) ? "Legal" : "Illegal"));
