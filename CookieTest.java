@@ -13,7 +13,7 @@ public class CookieTest {
      */
     public static boolean verifyCookie(String cookie) {
         boolean legal = false;
-        Pattern p = Pattern.compile("^(Set-Cookie:\\s)([!-'*-\\.0-9A-Z^-z|~]+=([\\/\"]*[!#-+--:<-\\[\\]-~]*[\\\\\"]*(;\\s((Expires=(Mon|Tue|Wed|Thu|Fri|Sat|Sun),\\s[\\d]{2}\\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\\s[\\d]{4}\\s[\\d]{2}:[\\d]{2}:[\\d]{2}\\sGMT)|(HttpOnly)|(Max-Age=^[1-9]\\d*)|(Domain=([\\.]?(^[\\w]+((\\w|\\d)+-)+|(\\w\\d)+)?)*)|(Path=[!-:<-~]+)|(Secure)))*))");//. represents single character  
+        Pattern p = Pattern.compile("^(Set-Cookie:\\s)([!-'*-\\.0-9A-Z^-z|~]+=([\"]*[!#-+--:<-\\[\\]-~]*[\"]*(;\\s((Expires=(Mon|Tue|Wed|Thu|Fri|Sat|Sun),\\s[\\d]{2}\\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\\s[\\d]{4}\\s[\\d]{2}:[\\d]{2}:[\\d]{2}\\sGMT)|(HttpOnly)|(Max-Age=^[1-9]\\d*)|(Domain=([\\.]?([a-zA-Z]((([\\w]+-)+)?[\\w]+)?))*)|(Path=[!-:<-~]+)|(Secure)))*))");//. represents single character  
 		Matcher m = p.matcher(cookie);
 		// ([!#$%&'\\(\\)*+-./0-9:<=>?@A-Z\\[\\]^_`a-z\\{|\\}~\\]*\\(\\)?=&|$))
 		// !#-+--:<-\\[\\]-~
