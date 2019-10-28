@@ -3,6 +3,7 @@ public class HwEngineer extends Employee implements SalaryRaisable{
 		super(name, baseSalary);
 	}
 	public double RaiseSalary() {
+		this.baseSalary *= 1.18;
 		return getBaseSalary()*(1.18);
 	}
 }

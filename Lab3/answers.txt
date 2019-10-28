@@ -1,0 +1,5 @@
+1. Static is used to allow use to use main without instantiating the class. Without the static, the program will not execute what is in main
+
+2. Factory Pattern
+
+3. Design patterns provide solution to instantiate a object in the best possible way for specific situations.

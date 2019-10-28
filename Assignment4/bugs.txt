@@ -1,0 +1,34 @@
+1. What is the bug?
+	Method ignored return value
+2. Why is it happening?
+	This is happening because when we do input.replace('e', 'o'), it doesn't store the return value of the function. This means the string of input is not actually changed.
+3. Provide a solution to fix the bug.
+	All we need to do is store the return value. A possible fix is changing the line to input = input.replace('e', 'o')
+
+1. What is the bug?
+	Bad practice: Checking string equality using ==
+2. Why is it happening?
+	This is happening because we are using == to test equality instead of the equals method. This is a problem because == only tests if each side is the same object while equals tests if they are logically equal
+3. Provide a solution to fix the bug.
+	Instead of input == "pool", change it to input.equals("pool")
+
+1. What is the bug?
+	Dereference of the result of readLine() without nullcheck
+2. Why is it happening?
+	This is happening because readline() is being derefenced without checking to see if the result is null. readline() will return null if there are no more lines of text to read and dereferencing that will generate a null pointer exception
+3. Provide a solution to fix the bug.
+	 Add an if statement after the try catch block. It would be like if(input == null) {return;} else {do the stuff originally after the try catch block}
+
+1. What is the bug?
+	Possible null pointer dereference in method on exception path
+2. Why is it happening?
+	input is set to null at the beginning, the problem is, when the code executes, this value may not get changed (no input), therefore when we do call the replace method on this input a nullpointerexception is raised since it is null.
+3. Provide a solution to fix the bug.
+	 Add an if statement after the try catch block. It would be like if(input == null) {return;} else {do the stuff originally after the try catch block
+
+1. What is the bug?
+	Multiple inputs will trigger 
+2. Why is it happening?
+	input is set to null at the beginning, the problem is, when the code executes, this value may not get changed (no input), therefore when we do call the replace method on this input a nullpointerexception is raised since it is null.
+3. Provide a solution to fix the bug.
+	 Add an if statement after the try catch block. It would be like if(input == null) {return;} else {do the stuff originally after the try catch block}

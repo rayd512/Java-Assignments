@@ -1,5 +1,5 @@
 public class Employee extends Person {
-	private double baseSalary;
+	double baseSalary;
 
 	public Employee(String name, double baseSalary) {
 		super (name);
