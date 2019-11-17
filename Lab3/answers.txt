@@ -1,5 +1,7 @@
 1. Static is used to allow use to use main without instantiating the class. Without the static, the program will not execute what is in main
 
-2. Factory Pattern
+2. Factory Pattern, user can instantiate many objects from the factory without even knowing what the object is
 
-3. Design patterns provide solution to instantiate a object in the best possible way for specific situations.
+3. Design patterns provide solution to instantiate a object in the best possible way for specific situations. You also want to localize the logic to instantiate a complex object. Makes complicated objects less complicated by simplifying them down.
+
+This provides a layer of abstraction between the user and the program. It is better for the user as it simplifies it for them and also simplifies it for the program as well.
