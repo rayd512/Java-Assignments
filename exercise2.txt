@@ -1,0 +1,16 @@
+One possible answer could be as follows:
+b extends x
+u extends x implements g
+z extends u
+
+				x
+				^
+		--------|-------
+		^				^
+		|				|
+		|				|
+		b   			u------------> interface g
+						^
+						|
+						|
+						z
