@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Math;
 
 /**
  * Lab 6: Java Collection Framework, Skip List and Apache Maven <br />
@@ -38,6 +39,16 @@ public class SkipList<K extends Comparable<K>, V> {
      */
     private int size = 0;
 
+
+    private int randLevel() {
+    	currentLvl = 1;
+    	while (Math.random < 0.25) {
+    		currentLvl++
+    	}
+
+    	return min()
+    }
+
     /**
      * Insert an new element into the skip list
      * @param key       {@code K} key of the new element
@@ -60,7 +71,7 @@ public class SkipList<K extends Comparable<K>, V> {
 
 
         if (current.key == null || current.key != key) {
-        	
+
         }
     }
 
