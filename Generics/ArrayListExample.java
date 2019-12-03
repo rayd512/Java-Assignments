@@ -11,19 +11,33 @@ public class ArrayListExample {
     /**
      * total_area -- takes a list of 2d shapes and calculates the total area of those shapes
      */
-
+    public static <T extends TwoDShape> double total_area(ArrayList<T> shapes) {
+        double total = 0;
+        for (T shape : shapes)
+            total += shape.area();
+        return total;
+    }
 
     /**
      * total_perimeter -- takes a list of rectangles and calculates the total perimeter
      */
 
-
+    public static double total_perimeter(ArrayList<Rectangle> shapes) {
+        double total = 0;
+        for (Rectangle shape : shapes)
+            total += shape.perimeter();
+        return total;
+    }
     /**
      * describe_all -- takes a list of geometric shapes and invokes the "{@code describe}" method
      * on each of them, then prints out the total number of shapes
      */
 
-
+    public static <T extends GeometricShape> void describe_all(ArrayList<T> shapes) {
+        for(T shape : shapes)
+            shape.describe();
+        System.out.println("Total number of shapes: " + shapes.size());
+    }
     /**
      * add_empties -- takes a list of geometric shapes and adds the following objects to it: <br/>
      *      {@code new Circle(0.0);          } <br/>
@@ -31,7 +45,12 @@ public class ArrayListExample {
      *      {@code new Rectangle(0.0, 0.0);  } <br/>
      *      {@code new Sphere(0.0);          }
      */
-
+    public static void add_empties(ArrayList<GeometricShape> shapes) {
+        shapes.add(new Circle(0.0));
+        shapes.add(new Cone(0.0, 0.0));
+        shapes.add(new Rectangle(0.0, 0.0));
+        shapes.add(new Sphere(0.0));
+    }
 
     /**
      * Difficult Question: <br/>
