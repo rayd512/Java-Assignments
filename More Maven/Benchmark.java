@@ -100,9 +100,9 @@ public class Benchmark
     powerN(seq, 2);
 
     System.out.println("collection,n,add,remove");
-    //benchmark(list1, seq, 10);
-    //benchmark(list2, seq, 10);
-    //benchmark(list3, seq, 10);
+    benchmark(list1, seq, 10);
+    benchmark(list2, seq, 10);
+    benchmark(list3, seq, 10);
     benchmark(list4, seq, 10);
   }
 }
